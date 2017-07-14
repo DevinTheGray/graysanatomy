@@ -1,0 +1,74 @@
+.header {
+
+  text-align: center;
+  padding:100px;
+  background-color: rgb(52, 53, 56);
+  opacity: .9;
+  color: white;
+  font-family: "Times New Roman", times, serif;
+  font-size: 25px;
+
+
+}
+
+
+.links {
+  display:flex;
+  justify-content: flex-end;
+  /*background-color: rgb(52, 53, 56);*/
+  color: white;
+
+  text-align: center;
+  padding: px;
+
+}
+
+.home {
+
+  background-image: url('./assets/Img1.jpg');
+  height: 100vh;
+  position: relative;
+
+}
+
+.allInfo {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  border: solid;
+  border-color: blue;
+  margin-top: 100px;
+}
+
+.info {
+  border: solid;
+border-color: blue;
+}
+
+.moreInfo {
+  border: solid;
+border-color: blue;
+}
+
+.extraInfo {
+  border: solid;
+border-color: blue;
+}
+
+.game {
+  display: flex;
+  justify-content: space-around;
+  border: solid;
+border-color: blue;
+
+}
+
+.explanation {
+  border: solid;
+  border-color: red;
+}
+
+.front {
+  border: solid;
+  border-color: yellow;
+}
