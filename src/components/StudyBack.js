@@ -63,7 +63,7 @@ const MAP = {
   ]
 }
 
-export default class PlayBack extends Component {
+export default class StudyBack extends Component {
   constructor(props) {
     super(props)
     this.onMouseEnter = this.onMouseEnter.bind(this)
@@ -82,7 +82,7 @@ export default class PlayBack extends Component {
       <div className='play'>
 
       <h1> Welcome to Gray's Anatomy! </h1>
-      <Link to='/play'> Anterior</Link>
+      <Link to='/play2'> Lets do it!</Link>
       <div className='game'>
         <div className='muscle'>
 

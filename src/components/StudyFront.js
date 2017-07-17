@@ -83,28 +83,29 @@ const MAP = {
   ]
 }
 
-export default class Play extends Component {
+export default class StudyFront extends Component {
     constructor(props) {
       super(props)
+
       this.onMouseEnter = this.onMouseEnter.bind(this)
 
-      // this.onMouseLeave = this.onMouseLeave.clearRect
+
     }
+
 
 
 
 
     onMouseEnter(area, index, event) {
-      this.refs.canvas.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
       this.refs.canvas.ctx.fillStyle = area.fillColor
       this.refs.canvas.ctx.fill()
     }
   render(){
     return(
-      <div className='play'>
+      <div className='studyfront'>
 
       <h1> Welcome to Gray's Anatomy! </h1>
-      <Link to='/play2'> Posterior</Link>
+      <Link to='/play'> Lets do it!</Link>
 
       <div className='game'>
         <div className='muscle'>
@@ -115,7 +116,7 @@ export default class Play extends Component {
 
 
 
-          <ImageMapper ref='canvas' src={require('../assets/front.jpg')} map={MAP} onMouseEnter={this.onMouseEnter}/>
+          <ImageMapper ref='canvas' src={require('../assets/front.jpg')} map={MAP} onMouseEnter={this.onMouseEnter}  />
 
 
 

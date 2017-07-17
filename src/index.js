@@ -13,6 +13,8 @@ import Play from './components/Play'
 import Header from './components/Header'
 import Home from './components/Home'
 import PlayBack from './components/PlayBack'
+import StudyFront from './components/StudyFront'
+import StudyBack from './components/StudyBack'
 
 
 ReactDOM.render(
@@ -22,6 +24,8 @@ ReactDOM.render(
     <Route exact path= '/' component={Home} />
     <Route path='/play' component={Play} />
     <Route path='/play2' component={PlayBack} />
+    <Route path='/studyfront' component={StudyFront} />
+    <Route path='/studyback' component={StudyBack} />
   </div>
 
 </Router>,
