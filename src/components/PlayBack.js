@@ -83,6 +83,7 @@ export default class PlayBack extends Component {
 
       <h1> Welcome to Gray's Anatomy! </h1>
       <Link to='/play'> Anterior</Link>
+      <Link to='/studyback'> Study </Link>
       <div className='game'>
         <div className='muscle'>
 

@@ -1,8 +1,19 @@
 import React, { Component } from 'react';
 import './App.css';
-import Header from './components/Header'
+import Header from './components/Header';
+// var express = require('express');
+// var app = express();
+// var port = 3000;
+//
+// app.get("/", fucntion(req, res, next){
+//   res.json({'key': 'value'})
+// })
+//
+// app.listen(port, fucntion(){
+//   console.log("listening on port" + port);
+// })
 
-{/* <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> */}
+
 
 class App extends Component {
   render() {

@@ -73,7 +73,7 @@ const MAP = {
     { _id:"sartorius2",fillColor:"rgba (38, 153, 0, 0.6)", shape: "poly", coords: [276,631,273,619,281,570,288,543,300,518,308,495,313,469,319,449,323,439,325,460,303,537,300,541,289,571] },
     { _id:"gracilis", fillColor:"rgba (36, 26, 0, 0.6)",shape: "poly", coords: [259,615,262,593,262,558,262,534,254,516,245,506,237,500,240,511,246,526,256,554] },
     { _id:"gracilis2", fillColor:"rgba (36, 26, 0, 0.6)",shape: "poly", coords: [270,547,270,534,273,524,278,514,285,503,291,496,286,515] },
-    { _id:"external-oblique",fillColor:"rgba (128, 0, 64, 0.6)", shape: "poly", coords: [186,426,184,400,185,378,185,360,184,337,186,333,181,320,189,318,186,314,184,306,179,302,196,301,201,299,210,302,208,335,210,368,213,408,214,429,212,455] },
+    { _id:"external-oblique", fillColor:"rgba (128, 0, 64, 0.6)", shape: "poly", coords: [186,426,184,400,185,378,185,360,184,337,186,333,181,320,189,318,186,314,184,306,179,302,196,301,201,299,210,302,208,335,210,368,213,408,214,429,212,455] },
     { _id:"external-oblique2",fillColor:"rgba (128, 0, 64, 0.6)", shape: "poly", coords: [317,438,341,415,336,389,333,363,334,345,338,334,332,331,333,324,335,324,335,320,331,316,325,315,327,313,337,303,328,304,316,295,305,299,305,388,303,419] },
     { _id:"rectus-abdominus", fillColor:"rgba (255, 102, 179, 0.6)",shape: "poly", coords: [211,335,246,318,253,322,261,317,279,326,300,337,299,356,302,371,297,390,297,405,293,433,286,471,280,491,273,515,262,515,254,511,232,465,220,428] },
     { _id:"serratus-anterior",fillColor:"rgba (0, 0, 128, 0.6)", shape: "poly", coords: [342,277,343,316,337,325,329,313,338,302,336,300,330,300,314,294,311,292] },
@@ -87,19 +87,31 @@ export default class StudyFront extends Component {
     constructor(props) {
       super(props)
 
-      this.onMouseEnter = this.onMouseEnter.bind(this)
+      // this.onMouseEnter = this.onMouseEnter.bind(this)
+      // this.onLoad = this.onLoad.bind(this)
+      this.onClick = this.onClick.bind(this)
+
+
+
+
 
 
     }
 
 
 
-
-
-    onMouseEnter(area, index, event) {
+    onClick(area, index, event){
       this.refs.canvas.ctx.fillStyle = area.fillColor
       this.refs.canvas.ctx.fill()
+
     }
+
+    // onMouseEnter(area, index, event) {
+    //   this.refs.canvas.ctx.fillStyle = area.fillColor
+    //   this.refs.canvas.ctx.fill()
+    // }
+
+
   render(){
     return(
       <div className='studyfront'>
@@ -116,7 +128,7 @@ export default class StudyFront extends Component {
 
 
 
-          <ImageMapper ref='canvas' src={require('../assets/front.jpg')} map={MAP} onMouseEnter={this.onMouseEnter}  />
+          <ImageMapper ref='canvas' src={require('../assets/front.jpg')} map={MAP} onClick={this.onClick} renderAreas={this.renderAreas} onLoad={this.onLoad}/>
 
 
 

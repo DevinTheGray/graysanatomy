@@ -1,9 +1,12 @@
 .header {
+  display: flex;
 
   text-align: center;
-  padding:100px;
+
   background-color: rgb(52, 53, 56);
   opacity: .9;
+  height: 100vh;
+  position: relative;
   color: white;
   font-family: "Times New Roman", times, serif;
   font-size: 25px;
@@ -13,9 +16,12 @@
 
 
 .links {
+
   display:flex;
-  justify-content: flex-end;
-  /*background-color: rgb(52, 53, 56);*/
+  justify-content: space-between;
+
+  background-color: black;
+
   color: white;
 
   text-align: center;
@@ -23,6 +29,18 @@
 
 }
 
+.grays {
+
+  text-align: left;
+}
+
+.take {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  text-align: right;
+
+}
 .home {
 
   background-image: url('./assets/Img1.jpg');
@@ -71,4 +89,41 @@ border-color: blue;
 .front {
   border: solid;
   border-color: yellow;
+}
+
+.back {
+  display: flex;
+  justify-content: center;
+  border: solid;
+  border-color: red;
+}
+
+.study {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.posterior {
+
+  border: solid;
+  border-color: red;
+}
+
+.anterior {
+  border: solid;
+  border-color: red;
+}
+
+.posterior2 {
+
+
+  display: flex;
+  justify-content: center;
+}
+
+.anterior2 {
+
+  display: flex;
+  justify-content: center;
 }

@@ -15,9 +15,15 @@ export default class Header extends Component {
 
 
         <div className='links'>
-        <Link to='/'> Home </Link>
-        <Link to='/play'> Play </Link>
-      
+          <div className='grays'>
+            <h1> Gray's Anatomy </h1>
+          </div>
+          <div className='take'>
+            <Link to='/'> Home </Link>
+            <Link to='/play'> Play </Link>
+            <Link to='/Study'> Study </Link>
+          </div>
+
 
 
 
