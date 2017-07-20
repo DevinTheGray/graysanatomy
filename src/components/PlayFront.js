@@ -384,7 +384,7 @@ export default class PlayFront extends Component {
     this.generateGuess = this.generateGuess.bind(this)
     this.onMouseEnter = this.onMouseEnter.bind(this)
     this.onClick = this.onClick.bind(this)
-    this.array =['frontalis','deltoid','brachioradialis','adductor-longus','sternocleidomastoid','external-oblique','rectus-abdominus','gastronemius', 'soleus']
+    this.array =['frontalis','external-oblique','brachioradialis','adductor-longus','sternocleidomastoid','rectus-abdominus','gastronemius', 'soleus']
 
     // this.state = { time: {}, seconds: 300 };
     // this.timer = 0;
