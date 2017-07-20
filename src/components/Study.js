@@ -13,22 +13,29 @@ export default class Study extends Component {
 
   render(){
     return(
-      <div className='study'>
+      <div className='study2'>
         <div className="anterior">
           <div className='anterior2'>
           <h2> Anterior </h2>
           </div>
 
 
-        <Link to='/studyfront'> {require('../assets/front.jpg')} </Link>
-          {/* <img src={require('../assets/front.jpg')} linkTo="studyfront"/> */}
+        <Link to="/studyfront"> <img src={require('../assets/front.jpg')} /> </Link>
+
+
+
+        </div>
+        <div className='choose'>
+          <h4> What to study? </h4>
         </div>
 
         <div className='posterior'>
           <div className='posterior2'>
           <h2> Posterior </h2>
           </div>
-          <img src={require('../assets/back.jpg')} />
+          <Link to="/studyback"> <img src={require('../assets/back.jpg')} /> </Link>
+
+          {/* <img src={require('../assets/back.jpg')} /> */}
         </div>
 
 

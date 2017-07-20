@@ -87,9 +87,9 @@ export default class StudyFront extends Component {
     constructor(props) {
       super(props)
 
-      // this.onMouseEnter = this.onMouseEnter.bind(this)
+      this.onMouseEnter = this.onMouseEnter.bind(this)
       // this.onLoad = this.onLoad.bind(this)
-      this.onClick = this.onClick.bind(this)
+      // this.onClick = this.onClick.bind(this)
 
 
 
@@ -99,45 +99,38 @@ export default class StudyFront extends Component {
     }
 
 
-
-    onClick(area, index, event){
-      this.refs.canvas.ctx.fillStyle = area.fillColor
-      this.refs.canvas.ctx.fill()
-
-    }
-
-    // onMouseEnter(area, index, event) {
+    //
+    // onClick(area, index, event){
     //   this.refs.canvas.ctx.fillStyle = area.fillColor
     //   this.refs.canvas.ctx.fill()
+    //
     // }
 
+    onMouseEnter(area, index, event) {
+      this.refs.canvas.ctx.fillStyle = area.fillColor
+      this.refs.canvas.ctx.fill()
+    }
+    playFront(){
+      return
+    }
 
   render(){
     return(
-      <div className='studyfront'>
-
-      <h1> Welcome to Gray's Anatomy! </h1>
-      <Link to='/play'> Lets do it!</Link>
-
-      <div className='game'>
-        <div className='muscle'>
+      <div className='play'>
 
 
 
+      <div className='study'>
+        <div className='button'>
+        <Link to='/playfront'> Start</Link>
+        </div>
+        <div className='muscle-study'>
+          <img src={require('../assets/labelfront.jpg')} />
 
-
-
-
-          <ImageMapper ref='canvas' src={require('../assets/front.jpg')} map={MAP} onClick={this.onClick} renderAreas={this.renderAreas} onLoad={this.onLoad}/>
-
-
-
-
+          {/* <ImageMapper ref="canvas" src={require('../assets/studyback.jpg')} map={MAP} onMouseEnter={this.onMouseEnter} /> */}
 
         </div>
-        <div className='explanation'>
-          <p> This is where I talk about the game </p>
-        </div>
+
       </div>
 
 

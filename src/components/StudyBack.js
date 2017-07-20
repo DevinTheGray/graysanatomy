@@ -81,17 +81,19 @@ export default class StudyBack extends Component {
     return(
       <div className='play'>
 
-      <h1> Welcome to Gray's Anatomy! </h1>
-      <Link to='/play2'> Lets do it!</Link>
-      <div className='game'>
-        <div className='muscle'>
 
-          <ImageMapper ref="canvas" src={require('../assets/back.jpg')} map={MAP} onMouseEnter={this.onMouseEnter} />
+
+      <div className='study'>
+        <div className='button'>
+        <Link to='/play2'> Start</Link>
+        </div>
+        <div className='muscle-study'>
+          <img src={require('../assets/studyback.jpg')} />
+
+          {/* <ImageMapper ref="canvas" src={require('../assets/studyback.jpg')} map={MAP} onMouseEnter={this.onMouseEnter} /> */}
 
         </div>
-        <div className='explanation'>
-          <p> This is where I talk about the game </p>
-        </div>
+
       </div>
 
 
