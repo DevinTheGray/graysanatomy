@@ -85,7 +85,7 @@ export default class StudyBack extends Component {
 
       <div className='study'>
         <div className='button'>
-        <Link to='/play2'> Start</Link>
+        <Link to='/play2'><button className='leggo'> Start</button></Link>
         </div>
         <div className='muscle-study'>
           <img src={require('../assets/studyback.jpg')} />

@@ -9,19 +9,12 @@ export default class Home extends Component {
     return(
       <div className='here home'>
         <div className='header'>
-        
+
+          <img className='logo' src={require('../assets/graysanat.png')} />
+          <div className='gray'> An anatomy study game for the easily distracted </div>
+
         </div>
-        {/* <div className='allInfo'>
-        <div className='info'>
-          <p> Random things blah blah blah I am saying things </p>
-        </div>
-        <div className='moreInfo'>
-          <p> Random things blah blah blah I am saying things </p>
-        </div>
-        <div className='extraInfo'>
-          <p> Random things blah blah blah I am saying things </p>
-        </div>
-      </div> */}
+
 
 
 

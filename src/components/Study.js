@@ -25,9 +25,7 @@ export default class Study extends Component {
 
 
         </div>
-        <div className='choose'>
-          <h4> What to study? </h4>
-        </div>
+      <div className="study"><h1>Study</h1></div>
 
         <div className='posterior'>
           <div className='posterior2'>

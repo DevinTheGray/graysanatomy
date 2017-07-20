@@ -376,7 +376,7 @@ const MAP = {
 
 
 
-export default class Play extends Component {
+export default class PlayFront extends Component {
   constructor(props) {
     super(props)
     this.state = { muscle: "{muscle}" }
@@ -384,7 +384,8 @@ export default class Play extends Component {
     this.generateGuess = this.generateGuess.bind(this)
     this.onMouseEnter = this.onMouseEnter.bind(this)
     this.onClick = this.onClick.bind(this)
-    this.array = ['frontalis','deltoid','brachioradialis','adductor-longus','sternocleidomastoid','external-oblique','rectus-abdominus','gastronemius', 'soleus']
+    this.array =['frontalis','deltoid','brachioradialis','adductor-longus','sternocleidomastoid','external-oblique','rectus-abdominus','gastronemius', 'soleus']
+
     // this.state = { time: {}, seconds: 300 };
     // this.timer = 0;
     // this.startTimer = this.startTimer.bind(this);
@@ -524,8 +525,8 @@ onClick(area,index,event){
         <div className="label">
       <h3> Major Anterior Muscles </h3>
     </div>
-      <Link to='/play2'> Posterior</Link>
-      <Link to='/studyfront'> Study </Link>
+      <Link to='/play2'><button className="leggo"> Posterior</button></Link>
+      <Link to='/studyfront'><button className='leggo'> Study</button> </Link>
       <div className='game'>
         <div className='muscle'>
 
@@ -534,8 +535,7 @@ onClick(area,index,event){
         </div>
         <div className='generate-muscle'>
           <div className='timer'>
-              {/* <button onClick={this.startTimer}>Start</button>
-              m: {this.state.time.m} s: {this.state.time.s} */}
+
             <Timer />
             </div>
 
@@ -545,7 +545,7 @@ onClick(area,index,event){
 
 
             <h3>Find {this.state.muscle}</h3>
-            
+
 
 
 

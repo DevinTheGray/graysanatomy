@@ -26,15 +26,14 @@ export default class Study extends Component {
 
         </div>
 
-        <div className='choose'>
-          <h4> What to play? </h4>
-        </div>
+        <div className="study"><h1>Play</h1></div>
+
 
         <div className='posterior'>
           <div className='posterior2'>
           <h2> Posterior </h2>
           </div>
-          <Link to="/play2"> <img src={require('../assets/back.jpg')} /> </Link>
+          <Link to="/play2" className='shadow'> <img src={require('../assets/back.jpg')} /> </Link>
 
           {/* <img src={require('../assets/back.jpg')} /> */}
         </div>

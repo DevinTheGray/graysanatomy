@@ -16,7 +16,7 @@ export default class Timer extends Component {
   constructor(props) {
     super(props)
 
-    this.state = { time: {}, seconds: 300 };
+    this.state = { time: {}, seconds: 60 };
     this.timer = 0;
     this.startTimer = this.startTimer.bind(this);
     this.countDown = this.countDown.bind(this);
@@ -75,8 +75,10 @@ export default class Timer extends Component {
 
 
         <div className='count-down'>
-            <button onClick={this.startTimer}>Start</button>
+            <button  className="leggo" onClick={this.startTimer}>Start</button>
+            <div className="red">
             m: {this.state.time.m} s: {this.state.time.s}
+          </div>
           </div>
 
 

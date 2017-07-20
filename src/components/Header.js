@@ -16,12 +16,13 @@ export default class Header extends Component {
 
         <div className='links'>
           <div className='grays'>
-            <h1> Gray's Anatomy </h1>
+            <img className='logo' src={require('../assets/gray_title_light.png')} />
           </div>
           <div className='take'>
-            <Link to='/'> Home </Link>
-            <Link to='/play'> Play </Link>
-            <Link to='/Study'> Study </Link>
+            <Link to="/"> <button className='leggo'>Home</button> </Link>
+            <Link to="/play"> <button className='leggo'>Play</button> </Link>
+            <Link to="/study"> <button className='leggo'>Study</button> </Link>
+
           </div>
 
 

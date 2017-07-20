@@ -122,7 +122,7 @@ export default class StudyFront extends Component {
 
       <div className='study'>
         <div className='button'>
-        <Link to='/playfront'> Start</Link>
+        <Link to='/playfront'><button className='leggo'> Start</button></Link>
         </div>
         <div className='muscle-study'>
           <img src={require('../assets/labelfront.jpg')} />

@@ -1,10 +1,19 @@
+*{
+  font-family: monospace;
+
+}
+
 .header {
   display: flex;
+  flex-wrap: wrap;
+
 
   text-align: center;
+  flex-direction: column;
+  align-items: center;
 
-  background-color: rgb(52, 53, 56);
-  opacity: .9;
+  /*background-color: rgb(52, 53, 56);
+  opacity: .9;*/
   height: 100vh;
   position: relative;
   color: white;
@@ -12,6 +21,25 @@
   font-size: 25px;
 
 
+}
+
+.logo {
+  margin-top: 25px;
+  width: 50%;
+}
+
+.gray {
+  color: black;
+  padding: 20px;
+
+}
+
+.devin {
+  margin-top: 10px;
+  font-size: 30px;
+  display: flex;
+
+  align-items:  flex-end;
 }
 
 
@@ -43,7 +71,7 @@
 }
 .home {
 
-  background-image: url('./assets/Img1.jpg');
+  background-image: url('./assets/gray_bkg.png');
   height: 100vh;
   position: relative;
 
@@ -53,25 +81,11 @@
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-around;
-  border: solid;
-  border-color: blue;
+
   margin-top: 100px;
 }
 
-.info {
-  border: solid;
-border-color: blue;
-}
 
-.moreInfo {
-  border: solid;
-border-color: blue;
-}
-
-.extraInfo {
-  border: solid;
-border-color: blue;
-}
 
 .game {
   display: flex;
@@ -81,11 +95,11 @@ border-color: blue;
 }
 
 .generate-muscle {
-  border: solid;
-  border-color: red;
+
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 
 
   padding-bottom: 65%;
@@ -93,8 +107,7 @@ border-color: blue;
 }
 
 .front {
-  border: solid;
-  border-color: yellow;
+
 }
 
 .back {
@@ -102,6 +115,7 @@ border-color: blue;
   justify-content: center;
   border: solid;
   border-color: red;
+
 }
 
 .study {
@@ -126,13 +140,38 @@ border-color: blue;
 
   display: flex;
   justify-content: center;
+  text-shadow: 2px 2px 5px rgb(9, 107, 122);
 }
 
 .anterior2 {
 
   display: flex;
   justify-content: center;
+  text-shadow: 2px 2px 5px rgb(9, 107, 122);
+
 }
+
+/*.shadow {
+
+}
+
+.shadow:hover {
+  border: 1px solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+  outline-color: rgba(255, 255, 255, 0);
+  outline-offset: 15px;
+  text-shadow: 1px 1px 2px #427388;
+}*/
+
+.study {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+
+
+
 
 .label {
 
@@ -142,8 +181,7 @@ border-color: blue;
 }
 
 .button {
-  border: solid;
-  border-color: blue;
+
   width: 15%;
   display: flex;
   justify-content: center;
@@ -168,13 +206,46 @@ justify-content: space-between;
 }
 
 .count-down {
-  border: solid;
-  border-color: blue;
+  display: flex;
+  flex-wrap: wrap;
+
+
+
+
 }
 
+.leggo {
+  background: #819FAE;
+ background-image: -webkit-linear-gradient(top, #B6D1DA, #819FAE);
+ background-image: -moz-linear-gradient(top, #B6D1DA, #819FAE);
+ background-image: -ms-linear-gradient(top, #B6D1DA, #819FAE);
+ background-image: -o-linear-gradient(top, #B6D1DA, #819FAE);
+ background-image: linear-gradient(to bottom, #B6D1DA, #819FAE);
+ -webkit-border-radius: 28;
+ -moz-border-radius: 28;
+ border-radius: 28px;
+ font-family: Courier New;
+ color: #ffffff;
+ font-size: 20px;
+ padding: 6px 12px 6px 12px;
+ text-decoration: none;
+}
+
+.leggo:hover{
+  background: #FFC9D2;
+   background-image: -webkit-linear-gradient(top, #FFC9D2, #CB8892);
+   background-image: -moz-linear-gradient(top, #FFC9D2, #CB8892);
+   background-image: -ms-linear-gradient(top, #FFC9D2, #CB8892);
+   background-image: -o-linear-gradient(top, #FFC9D2, #CB8892);
+   background-image: linear-gradient(to bottom, #FFC9D2, #CB8892);
+   text-decoration: none;
+}
+
+
+
+
 .choose {
-  border: solid;
-  border-color: red;
+
   height: 50%;
 
   display: flex;
@@ -186,6 +257,23 @@ justify-content: space-between;
 
 .random {
   align-self:center;
-  border: solid;
-  border-color: blue;
+
+  display: flex;
+
+}
+
+.red {
+
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+/*.timer {
+  display: flex;
+}*/
+
+.generate-muscle{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
