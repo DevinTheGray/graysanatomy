@@ -2,286 +2,288 @@
 import React, { Component } from 'react';
 import '../App.css';
 import ImageMapper from 'react-image-mapper';
+// import Getmuscle from './Getmuscle';
 import Timer from './Timer';
+
 import {
   BrowserRouter as Router,
   Route,
   Link
 } from 'react-router-dom'
 
-const front =
-  [{
-  id: 1,
-  name: 'frontalis'
-  },
-  {
-  id: 2,
-  name: 'frontalis'
-  },
-  {
-  id: 3,
-  name: 'temporalis'
-  },
-  {
-  id: 4,
-  name: 'temporalis'
-  },
-  {
-  id: 5,
-  name: 'sternocleidomastoid'
-  },
-  {
-  id: 6,
-  name: 'sternocleidomastoid'
-  },
-  {
-  id: 7,
-  name: 'trapezius'
-  },
-  {
-  id: 8,
-  name: 'trapezius'
-  },
-  {
-  id: 9,
-  name: 'deltoid'
-  },
-  {
-  id: 10,
-  name: 'deltoid'
-  },
-  {
-  id: 11,
-  name: 'pectoralis-major'
-  },
-  {
-  id: 12,
-  name: 'pectoralis-major'
-  },
-  {
-  id: 13,
-  name: 'biceps-brachii'
-  },
-  {
-  id: 14,
-  name: 'biceps-brachii'
-  },
-  {
-  id: 15,
-  name: 'biceps-brachii'
-  },
-  {
-  id: 16,
-  name: 'biceps-brachii'
-  },
-  {
-  id: 17,
-  name: 'triceps-brachii'
-  },
-  {
-  id: 18,
-  name: 'triceps-brachii'
-  },
-  {
-  id: 19,
-  name: 'brachialis'
-  },
-  {
-  id: 20,
-  name: 'brachialis'
-  },
-  {
-  id: 21,
-  name: 'pronator-teres'
-  },
-  {
-  id: 22,
-  name: 'pronator-teres'
-  },
-  {
-  id: 23,
-  name: 'brachioradialis'
-  },
-  {
-  id: 24,
-  name: 'brachioradialis'
-  },
-  {
-  id: 25,
-  name: 'flexor-carpi-radialis'
-  },
-  {
-  id: 26,
-  name: 'flexor-carpi-radialis'
-  },
-  {
-  id: 27,
-  name: 'flexor-digitorum-superficialis'
-  },
-  {
-  id: 28,
-  name: 'flexor-digitorum-superficialis'
-  },
-  {
-  id: 29,
-  name: 'flexor-carpi-ulnaris'
-  },
-  {
-  id: 30,
-  name: 'flexor-carpi-ulnaris'
-  },
-  {
-  id: 31,
-  name: 'iliacus'
-  },
-  {
-  id: 32,
-  name: 'iliacus'
-  },
-  {
-  id: 33,
-  name: 'psoas-major'
-  },
-  {
-  id: 34,
-  name: 'psoas-major'
-  },
-  {
-  id: 35,
-  name: 'pectineus'
-  },
-  {
-  id: 36,
-  name: 'pectineus'
-  },
-  {
-  id: 37,
-  name: 'adductor-longus'
-  },
-  {
-  id: 38,
-  name: 'adductor-longus'
-  },
-  {
-  id: 39,
-  name: 'extensor-hallucis-longus'
-  },
-  {
-  id: 40,
-  name: 'extensor-hallucis-longus'
-  },
-  {
-  id: 41,
-  name: 'flexor-digitorum-longus'
-  },
-  {
-  id: 42,
-  name: 'flexor-digitorum-longus'
-  },
-  {
-  id: 43,
-  name: 'soleus'
-  },
-  {
-  id: 44,
-  name: 'soleus'
-  },
-  {
-  id: 45,
-  name: 'gastronemius'
-  },
-  {
-  id: 46,
-  name: 'gastronemius'
-  },
-  {
-  id: 47,
-  name: 'tibialis-anterior'
-  },
-  {
-  id: 48,
-  name: 'tibialis-anterior'
-  },
-  {
-  id: 49,
-  name: 'extensor-digitorum-longus'
-  },
-  {
-  id: 50,
-  name: 'extensor-digitorum-longus'
-  },
-  {
-  id: 51,
-  name: 'peroneus-longus'
-  },
-  {
-  id: 52,
-  name: 'peroneus-longus'
-  },
-  {
-  id: 53,
-  name: 'vastus-medialis'
-  },
-  {
-  id: 54,
-  name: 'vastus-medialis'
-  },
-  {
-  id: 55,
-  name: 'rectus-femoris'
-  },
-  {
-  id: 56,
-  name: 'rectus-femoris'
-  },
-  {
-  id: 57,
-  name: 'vastus-lateralis'
-  },
-  {
-  id: 58,
-  name: 'vastus-lateralis'
-  },
-  {
-  id: 59,
-  name: 'sartorius'
-  },
-  {
-  id: 60,
-  name: 'sartorius'
-  },
-  {
-  id: 61,
-  name: 'gracilis'
-  },
-  {
-  id: 62,
-  name: 'gracilis'
-  },
-  {
-  id: 63,
-  name: 'external-oblique'
-  },
-  {
-  id: 64,
-  name: 'external-oblique'
-  },
-  {
-  id: 65,
-  name: 'rectus-abdominus'
-  },
-  {
-  id: 66,
-  name: 'serratus-anterior'
-  },
-  {
-  id: 67,
-  name: 'serratus-anterior'
-  },
-  {
-  id: 68,
-  name: 'latissimus-dorsi'
-  }]
+// const front =
+//   [{
+//   id: 1,
+//   name: 'frontalis'
+//   },
+//   {
+//   id: 2,
+//   name: 'frontalis'
+//   },
+//   {
+//   id: 3,
+//   name: 'temporalis'
+//   },
+//   {
+//   id: 4,
+//   name: 'temporalis'
+//   },
+//   {
+//   id: 5,
+//   name: 'sternocleidomastoid'
+//   },
+//   {
+//   id: 6,
+//   name: 'sternocleidomastoid'
+//   },
+//   {
+//   id: 7,
+//   name: 'trapezius'
+//   },
+//   {
+//   id: 8,
+//   name: 'trapezius'
+//   },
+//   {
+//   id: 9,
+//   name: 'deltoid'
+//   },
+//   {
+//   id: 10,
+//   name: 'deltoid'
+//   },
+//   {
+//   id: 11,
+//   name: 'pectoralis-major'
+//   },
+//   {
+//   id: 12,
+//   name: 'pectoralis-major'
+//   },
+//   {
+//   id: 13,
+//   name: 'biceps-brachii'
+//   },
+//   {
+//   id: 14,
+//   name: 'biceps-brachii'
+//   },
+//   {
+//   id: 15,
+//   name: 'biceps-brachii'
+//   },
+//   {
+//   id: 16,
+//   name: 'biceps-brachii'
+//   },
+//   {
+//   id: 17,
+//   name: 'triceps-brachii'
+//   },
+//   {
+//   id: 18,
+//   name: 'triceps-brachii'
+//   },
+//   {
+//   id: 19,
+//   name: 'brachialis'
+//   },
+//   {
+//   id: 20,
+//   name: 'brachialis'
+//   },
+//   {
+//   id: 21,
+//   name: 'pronator-teres'
+//   },
+//   {
+//   id: 22,
+//   name: 'pronator-teres'
+//   },
+//   {
+//   id: 23,
+//   name: 'brachioradialis'
+//   },
+//   {
+//   id: 24,
+//   name: 'brachioradialis'
+//   },
+//   {
+//   id: 25,
+//   name: 'flexor-carpi-radialis'
+//   },
+//   {
+//   id: 26,
+//   name: 'flexor-carpi-radialis'
+//   },
+//   {
+//   id: 27,
+//   name: 'flexor-digitorum-superficialis'
+//   },
+//   {
+//   id: 28,
+//   name: 'flexor-digitorum-superficialis'
+//   },
+//   {
+//   id: 29,
+//   name: 'flexor-carpi-ulnaris'
+//   },
+//   {
+//   id: 30,
+//   name: 'flexor-carpi-ulnaris'
+//   },
+//   {
+//   id: 31,
+//   name: 'iliacus'
+//   },
+//   {
+//   id: 32,
+//   name: 'iliacus'
+//   },
+//   {
+//   id: 33,
+//   name: 'psoas-major'
+//   },
+//   {
+//   id: 34,
+//   name: 'psoas-major'
+//   },
+//   {
+//   id: 35,
+//   name: 'pectineus'
+//   },
+//   {
+//   id: 36,
+//   name: 'pectineus'
+//   },
+//   {
+//   id: 37,
+//   name: 'adductor-longus'
+//   },
+//   {
+//   id: 38,
+//   name: 'adductor-longus'
+//   },
+//   {
+//   id: 39,
+//   name: 'extensor-hallucis-longus'
+//   },
+//   {
+//   id: 40,
+//   name: 'extensor-hallucis-longus'
+//   },
+//   {
+//   id: 41,
+//   name: 'flexor-digitorum-longus'
+//   },
+//   {
+//   id: 42,
+//   name: 'flexor-digitorum-longus'
+//   },
+//   {
+//   id: 43,
+//   name: 'soleus'
+//   },
+//   {
+//   id: 44,
+//   name: 'soleus'
+//   },
+//   {
+//   id: 45,
+//   name: 'gastronemius'
+//   },
+//   {
+//   id: 46,
+//   name: 'gastronemius'
+//   },
+//   {
+//   id: 47,
+//   name: 'tibialis-anterior'
+//   },
+//   {
+//   id: 48,
+//   name: 'tibialis-anterior'
+//   },
+//   {
+//   id: 49,
+//   name: 'extensor-digitorum-longus'
+//   },
+//   {
+//   id: 50,
+//   name: 'extensor-digitorum-longus'
+//   },
+//   {
+//   id: 51,
+//   name: 'peroneus-longus'
+//   },
+//   {
+//   id: 52,
+//   name: 'peroneus-longus'
+//   },
+//   {
+//   id: 53,
+//   name: 'vastus-medialis'
+//   },
+//   {
+//   id: 54,
+//   name: 'vastus-medialis'
+//   },
+//   {
+//   id: 55,
+//   name: 'rectus-femoris'
+//   },
+//   {
+//   id: 56,
+//   name: 'rectus-femoris'
+//   },
+//   {
+//   id: 57,
+//   name: 'vastus-lateralis'
+//   },
+//   {
+//   id: 58,
+//   name: 'vastus-lateralis'
+//   },
+//   {
+//   id: 59,
+//   name: 'sartorius'
+//   },
+//   {
+//   id: 60,
+//   name: 'sartorius'
+//   },
+//   {
+//   id: 61,
+//   name: 'gracilis'
+//   },
+//   {
+//   id: 62,
+//   name: 'gracilis'
+//   },
+//   {
+//   id: 63,
+//   name: 'external-oblique'
+//   },
+//   {
+//   id: 64,
+//   name: 'external-oblique'
+//   },
+//   {
+//   id: 65,
+//   name: 'rectus-abdominus'
+//   },
+//   {
+//   id: 66,
+//   name: 'serratus-anterior'
+//   },
+//   {
+//   id: 67,
+//   name: 'serratus-anterior'
+//   },
+//   {
+//   id: 68,
+//   name: 'latissimus-dorsi'
+//   }]
 
 const MAP = {
   name: "my-map",
@@ -358,29 +360,141 @@ const MAP = {
   ]
 }
 
-
+// const front= ['frontalis','deltoid','brachioradialis','adductor-longus','sternocleidomastoid','external-oblique','rectus-abdominus','gastronemius', 'soleus']
+//
+//
+// function generateGuess(array) {
+//   var currentIndex = array.length
+//   var randomIndex = Math.floor(Math.random() * currentIndex);
+//   var temporaryValue = array[randomIndex];
+//
+//   return temporaryValue;
+//
+//
+// }
 
 
 export default class Play extends Component {
   constructor(props) {
     super(props)
+    this.state = { muscle: "" }
     this.onMouseEnter = this.onMouseEnter.bind(this)
-    // this.onClick = this.onClick.bind(this)
+    this.onClick = this.onClick.bind(this)
+    this.array = ['frontalis','deltoid','brachioradialis','adductor-longus','sternocleidomastoid','external-oblique','rectus-abdominus','gastronemius', 'soleus']
+    // this.state = { time: {}, seconds: 300 };
+    // this.timer = 0;
+    // this.startTimer = this.startTimer.bind(this);
+    // this.countDown = this.countDown.bind(this);
+    // this.generateGuess = this.generateGuess.bind(this)();
+
+
 
   }
+  componentDidMount() {
+    let anatomy = this.generateGuess(this.state);
+    this.setState({ muscle: anatomy });
+  }
+  generateGuess(array){
+
+
+      let currentIndex = array.length
+      let randomIndex = Math.floor(Math.random() * currentIndex);
+      let temporaryValue = array[randomIndex];
+
+      return temporaryValue;
+
+
+    }
+
+
+
+
+
+
+
+
   onMouseEnter(area, index, event) {
     this.refs.canvas.ctx.fillStyle = area.fillColor
     this.refs.canvas.ctx.fill()
   }
 
-  // generateGuess() {
+onClick(area,index,event){
+  this.refs.canvas.ctx.fillStyle = area.fillColor
+  this.refs.canvas.ctx.fill()
+  let muscle = this.generateGuess(this.array)
+  console.log(muscle)
+  return muscle
+
+}
+
+
   //
+  // secondsToTime(secs){
+  //
+  //   let divisor_for_minutes = secs % (60 * 60);
+  //   let minutes = Math.floor(divisor_for_minutes / 60);
+  //
+  //   let divisor_for_seconds = divisor_for_minutes % 60;
+  //   let seconds = Math.ceil(divisor_for_seconds);
+  //
+  //   let obj = {
+  //
+  //     "m": minutes,
+  //     "s": seconds
+  //   };
+  //   return obj;
   // }
   //
-  // onClick(obj) {
-  //     //if (quid == obj._id) {
-  //     //}
+  // componentDidMount() {
+  //   let timeLeftVar = this.secondsToTime(this.state.seconds);
+  //   this.setState({ time: timeLeftVar });
   // }
+  //
+  // startTimer() {
+  //   if (this.timer == 0) {
+  //     this.timer = setInterval(this.countDown, 1000);
+  //   }
+  // }
+  //
+  //
+  // countDown() {
+  //
+  //   let seconds = this.state.seconds - 1;
+  //   this.setState({
+  //     time: this.secondsToTime(seconds),
+  //     seconds: seconds,
+  //   });
+  //
+  //
+  //   if (seconds == 0) {
+  //     clearInterval(this.timer);
+  //
+  //   }
+  // }
+
+
+   //
+  //  generateGuess(array) {
+  //    var currentIndex = this.array.length
+  //    var randomIndex = Math.floor(Math.random() * currentIndex);
+  //    var temporaryValue = this.array[randomIndex];
+   //
+  //    return temporaryValue;
+   //
+   //
+  //   }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   render(){
@@ -399,19 +513,32 @@ export default class Play extends Component {
           <ImageMapper ref="canvas" src={require('../assets/front.jpg')} map={MAP} onClick={this.onClick} onMouseEnter={this.onMouseEnter} />
 
         </div>
-      <div className='timer'>
-        <Timer />
-      </div>
-
-
         <div className='generate-muscle'>
+          <div className='timer'>
+              {/* <button onClick={this.startTimer}>Start</button>
+              m: {this.state.time.m} s: {this.state.time.s} */}
+            <Timer />
+            </div>
 
-          <p> muscle </p>
+
+
+          <div className='random'>
+
+            <h3>Find {this.state.muscle}</h3>
+          </div>
+
+
+        {/* </div> */}
         </div>
+
+
       </div>
 
 
       </div>
+
+
+
     )
   }
 }

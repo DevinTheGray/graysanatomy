@@ -1,5 +1,3 @@
-
-
 import React, { Component } from 'react';
 import '../App.css';
 
@@ -10,13 +8,22 @@ import {
 } from 'react-router-dom'
 
 
-export default class Timer extends React.Component {
-  constructor() {
-    super();
+
+
+
+
+export default class Timer extends Component {
+  constructor(props) {
+    super(props)
+
     this.state = { time: {}, seconds: 300 };
     this.timer = 0;
     this.startTimer = this.startTimer.bind(this);
     this.countDown = this.countDown.bind(this);
+
+
+
+
   }
 
   secondsToTime(secs){
@@ -62,14 +69,18 @@ export default class Timer extends React.Component {
     }
   }
 
-
-
-  render() {
+  render(){
     return(
+      <div className='timer'>
+
+
         <div className='count-down'>
-          <button onClick={this.startTimer}>Start</button>
-          m: {this.state.time.m} s: {this.state.time.s}
-        </div>
-    );
+            <button onClick={this.startTimer}>Start</button>
+            m: {this.state.time.m} s: {this.state.time.s}
+          </div>
+
+
+      </div>
+    )
   }
 }

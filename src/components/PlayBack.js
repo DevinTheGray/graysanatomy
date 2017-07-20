@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../App.css';
 import ImageMapper from 'react-image-mapper';
-import Timer from './Timer';
+
 import {
   BrowserRouter as Router,
   Route,
@@ -257,6 +257,10 @@ export default class PlayBack extends Component {
     super(props)
     this.onMouseEnter = this.onMouseEnter.bind(this)
     // this.onMouseLeave = this.onMouseLeave.clearRect
+    this.state = { time: {}, seconds: 300 };
+    this.timer = 0;
+    this.startTimer = this.startTimer.bind(this);
+    this.countDown = this.countDown.bind(this);
   }
   onMouseEnter(area, index, event) {
     this.refs.canvas.ctx.fillStyle = area.fillColor
@@ -266,6 +270,51 @@ export default class PlayBack extends Component {
   //   this.refs.canvas.ctx.clearRect = area.clearRect
   //   this.refs.canvas.ctx.fill()
   // }
+
+  secondsToTime(secs){
+
+    let divisor_for_minutes = secs % (60 * 60);
+    let minutes = Math.floor(divisor_for_minutes / 60);
+
+    let divisor_for_seconds = divisor_for_minutes % 60;
+    let seconds = Math.ceil(divisor_for_seconds);
+
+    let obj = {
+
+      "m": minutes,
+      "s": seconds
+    };
+    return obj;
+  }
+
+  componentDidMount() {
+    let timeLeftVar = this.secondsToTime(this.state.seconds);
+    this.setState({ time: timeLeftVar });
+  }
+
+  startTimer() {
+    if (this.timer == 0) {
+      this.timer = setInterval(this.countDown, 1000);
+    }
+  }
+
+
+  countDown() {
+
+    let seconds = this.state.seconds - 1;
+    this.setState({
+      time: this.secondsToTime(seconds),
+      seconds: seconds,
+    });
+
+
+    if (seconds == 0) {
+      clearInterval(this.timer);
+
+    }
+  }
+
+
 
   render(){
     return(
@@ -282,12 +331,17 @@ export default class PlayBack extends Component {
           <ImageMapper ref="canvas" src={require('../assets/back.jpg')} map={MAP} onMouseEnter={this.onMouseEnter} />
 
         </div>
-        <div className='timer'>
-          <Timer />
-        </div>
         <div className='generate-muscle'>
-          <p> MUSCLE </p>
+          <div className='timer'>
+              <button onClick={this.startTimer}>Start</button>
+              m: {this.state.time.m} s: {this.state.time.s}
+            </div>
+          <div className='random'>
+          <p> muscle </p>
         </div>
+        </div>
+
+
       </div>
 
 

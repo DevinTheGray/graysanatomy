@@ -19,24 +19,10 @@ import StudyBack from './components/StudyBack'
 import Study from './components/Study'
 import PlayFront from './components/PlayFront'
 import Timer from './components/Timer'
-
-
-// const express = require('express')
-// const path = require('path')
-// const environment = process.env.NODE_ENV || 'development'
-// const app = express()
+import Getmuscle from './components/Getmuscle'
 
 
 
-// app.use(express.static('./'))
-//
-//
-// app.get('*', function (request, response){
-//     response.sendFile(path.resolve(__dirname, 'app.js'))
-// })
-//
-// app.listen(port)
-// console.log("listening on port fuck you " + port)
 
 
 
@@ -52,7 +38,8 @@ ReactDOM.render(
     <Route path='/studyback' component={StudyBack} />
     <Route path='/study' component={Study} />
     <Route path='/playfront' component={PlayFront} />
-    <Route path='/timer' component={Timer} />
+    <Route path='/time' component={Timer} />
+    <Route path='/get' component={Getmuscle}/>
   </div>
 
 </Router>,

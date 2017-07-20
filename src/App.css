@@ -85,6 +85,7 @@ border-color: blue;
   border-color: red;
   display: flex;
   justify-content: center;
+
   align-items: center;
   padding-bottom: 65%;
   width: 300px;
@@ -179,4 +180,10 @@ justify-content: space-between;
   align-items: center;
   margin-top: 12%;
 
+}
+
+
+.random {
+  border: solid;
+  border-color: blue;
 }
