@@ -374,10 +374,14 @@ const MAP = {
 // }
 
 
+
+
 export default class Play extends Component {
   constructor(props) {
     super(props)
-    this.state = { muscle: "" }
+    this.state = { muscle: "{muscle}" }
+
+    this.generateGuess = this.generateGuess.bind(this)
     this.onMouseEnter = this.onMouseEnter.bind(this)
     this.onClick = this.onClick.bind(this)
     this.array = ['frontalis','deltoid','brachioradialis','adductor-longus','sternocleidomastoid','external-oblique','rectus-abdominus','gastronemius', 'soleus']
@@ -390,10 +394,16 @@ export default class Play extends Component {
 
 
   }
-  componentDidMount() {
-    let anatomy = this.generateGuess(this.state);
-    this.setState({ muscle: anatomy });
-  }
+  // componentDidMount() {
+  //   let anatomy = this.generateGuess(this.state);
+  //   this.setState({ muscle: anatomy });
+  // }
+
+
+
+
+
+
   generateGuess(array){
 
 
@@ -416,14 +426,22 @@ export default class Play extends Component {
   onMouseEnter(area, index, event) {
     this.refs.canvas.ctx.fillStyle = area.fillColor
     this.refs.canvas.ctx.fill()
+
   }
+
+
 
 onClick(area,index,event){
   this.refs.canvas.ctx.fillStyle = area.fillColor
   this.refs.canvas.ctx.fill()
-  let muscle = this.generateGuess(this.array)
-  console.log(muscle)
-  return muscle
+
+  this.muscle = this.generateGuess(this.array)
+  console.log(this.muscle);
+  this.setState({
+    muscle: this.muscle
+
+  });
+  return this.muscle
 
 }
 
@@ -498,6 +516,7 @@ onClick(area,index,event){
 
 
   render(){
+
     return(
 
       <div className='play'>
@@ -510,7 +529,7 @@ onClick(area,index,event){
       <div className='game'>
         <div className='muscle'>
 
-          <ImageMapper ref="canvas" src={require('../assets/front.jpg')} map={MAP} onClick={this.onClick} onMouseEnter={this.onMouseEnter} />
+          <ImageMapper ref="canvas" src={require('../assets/front.jpg')} map={MAP} onImageClick={this.onImageClick} onClick={this.onClick} onMouseEnter={this.onMouseEnter} />
 
         </div>
         <div className='generate-muscle'>
@@ -524,7 +543,13 @@ onClick(area,index,event){
 
           <div className='random'>
 
+
             <h3>Find {this.state.muscle}</h3>
+            
+
+
+
+
           </div>
 
 
