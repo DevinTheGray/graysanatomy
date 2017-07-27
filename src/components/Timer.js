@@ -69,14 +69,21 @@ export default class Timer extends Component {
     }
   }
 
+ //  componentDidMount() {
+ //    window.addEventListener('load', this.startTimer);
+ // }
+
+
   render(){
     return(
       <div className='timer'>
 
 
         <div className='count-down'>
+
             <button  className="leggo" onClick={this.startTimer}>Start</button>
             <div className="red">
+
             m: {this.state.time.m} s: {this.state.time.s}
           </div>
           </div>
