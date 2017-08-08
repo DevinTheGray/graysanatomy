@@ -5070,6 +5070,10 @@ react-error-overlay@^1.0.9:
     settle-promise "1.0.0"
     source-map "0.5.6"
 
+react-global@^0.1.8:
+  version "0.1.8"
+  resolved "https://registry.yarnpkg.com/react-global/-/react-global-0.1.8.tgz#a3ee5a5bc5c8dc75fc36bf62baa00665cffbcdfd"
+
 react-image-mapper@^0.0.4:
   version "0.0.4"
   resolved "https://registry.yarnpkg.com/react-image-mapper/-/react-image-mapper-0.0.4.tgz#1dff8d9593ca063cb99ed1cd17ddaf2014b3c961"
