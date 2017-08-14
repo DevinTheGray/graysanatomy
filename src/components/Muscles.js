@@ -286,50 +286,29 @@ const numbers =[{
 }]
 
 
-const listItems = numbers.map((number, i) =>
-  <li key={i}> {number.name} </li>
-);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 export default class Muscles extends Component {
   constructor(props) {
     super(props)
       this.state = {
-      numbers: numbers,
+      numbers: numbers, temporaryValue: {}
       };
       this.getMuscle=this.getMuscle.bind(this)
-
-
       }
 
 
 
 
-getMuscle(numbers){
+getMuscle(){
   let currentIndex = numbers.length
-  console.log(listItems.length)
-
+  console.log
   let randomIndex = Math.floor(Math.random()*currentIndex)
-  console.log(randomIndex)
-
   let temporaryValue = numbers[randomIndex]
-  this.setState({numbers: this.temporaryValue})
-  
   console.log(temporaryValue)
-  return this.temporaryValue
+  this.setState({temporaryValue: temporaryValue})
+  return temporaryValue
 }
+
+
 
 
 
@@ -337,19 +316,8 @@ getMuscle(numbers){
   render(){
     return(
       <div className='body'>
-
-{/*
-         <h4>  { this.state.numbers.map(item=> {
-          return <div>{item.name}</div>;
-        })}</h4> */}
-
         <button onClick={this.getMuscle}> Click </button>
-        <h1>{this.temporaryValue}</h1>
-
-
-
-
-
+        <div>{this.state.temporaryValue.name}</div>
       </div>
     )
   }

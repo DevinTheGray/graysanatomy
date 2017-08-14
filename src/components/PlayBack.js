@@ -356,6 +356,7 @@ onClick(area,index,event){
 
 
             <h3>Find {this.state.muscle}</h3>
+            
 
 
 
