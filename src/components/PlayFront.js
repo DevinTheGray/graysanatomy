@@ -387,11 +387,10 @@ const numbers =[{
 
 
 
-
 export default class PlayFront extends Component {
   constructor(props) {
     super(props)
-    this.state = { numbers: numbers, temporaryValue: {} , time: {}, seconds: 60, add: 0}
+    this.state = { numbers: numbers, temporaryValue: {} , time: {}, seconds: 60, score: {} }
     this.getMuscle=this.getMuscle.bind(this)
 
 
@@ -453,19 +452,29 @@ export default class PlayFront extends Component {
   }
 
 
+    countDown() {
+
+      let seconds = this.state.seconds - 1;
+      this.setState({
+        time: this.secondsToTime(seconds),
+        seconds: seconds,
+      });
+
+
+      if (seconds == 0) {
+        clearInterval(this.timer);
+
+      }
+    }
 
 
 
 
 
 
-  getMuscle(){
-    let currentIndex = numbers.length
-    let randomIndex = Math.floor(Math.random()*currentIndex)
-    let temporaryValue = numbers[randomIndex]
-    this.setState({temporaryValue: temporaryValue})
-    return temporaryValue
-  }
+
+
+
 
 
 
@@ -478,25 +487,14 @@ export default class PlayFront extends Component {
 
   }
 
-checkId(){
-  let add = 3
-  let currentIndex = numbers.length
-  let randomIndex = Math.floor(Math.random()*currentIndex)
-  let temporaryValue = numbers[randomIndex]
-
-  console.log(temporaryValue.id)
-  console.log(temporaryValue.id + add)
-
-
-}
 
 onClick(area,index,event){
   this.refs.canvas.ctx.fillStyle = area.fillColor
   this.refs.canvas.ctx.fill()
-  console.log(area._id)
+
 
   this.getMuscle();
-  this.checkId();
+  this.checkId(area, index, event,);
 
 }
 
@@ -511,7 +509,25 @@ onClick(area,index,event){
 
 
 
+  checkId(area, index, event){
+ console.log(area._id)
+ console.log(this.state.temporaryValue.id)
+ console.log(this.state.temporaryValue.name)
+ if (this.state.temporaryValue.id == area._id){
+   console.log('hellz yeah')
+   let score = 0
+   this.setState({score: 0})
 
+}
+  }
+
+  getMuscle(){
+    let currentIndex = numbers.length
+    let randomIndex = Math.floor(Math.random()*currentIndex)
+    let temporaryValue = numbers[randomIndex]
+    this.setState({temporaryValue: temporaryValue})
+    return temporaryValue
+  }
 
 
 
@@ -560,7 +576,9 @@ onClick(area,index,event){
           <div className='body'>
             <button onClick={this.getStuff}> Click </button>
             <div>{this.state.temporaryValue.name}</div>
-            <div></div>
+            <div>{this.state.score}</div>
+
+
 
           </div>
 
