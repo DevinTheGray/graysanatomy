@@ -3,16 +3,13 @@ import React, { Component } from 'react';
 import '../App.css';
 import ImageMapper from 'react-image-mapper';
 
-import Timer from './Timer';
 import createFragment from 'react-addons-create-fragment';
-// import Muscles from './Muscles';
 
 import {
   BrowserRouter as Router,
   Route,
   Link
 } from 'react-router-dom'
-import Muscles from './Muscles'
 
 
 const MAP = {
@@ -363,38 +360,13 @@ const numbers =[{
     name: 'latissimus-dorsi'
 }]
 
-
-
-
-
-
-
-
 let score = 1
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 export default class PlayFront extends Component {
   constructor(props) {
     super(props)
     this.state = { numbers: numbers, temporaryValue: {} , time: {}, seconds: 60, newScore: 0 }
     this.getMuscle=this.getMuscle.bind(this)
-
-
-
-
     this.onMouseEnter = this.onMouseEnter.bind(this)
     this.onClick = this.onClick.bind(this)
     this.timer = 0;
@@ -465,27 +437,11 @@ export default class PlayFront extends Component {
 
       }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   onMouseEnter(area, index, event) {
     this.refs.canvas.ctx.fillStyle = area.fillColor
     this.refs.canvas.ctx.fill()
 
   }
-
 
 onClick(area,index,event){
   this.refs.canvas.ctx.fillStyle = area.fillColor
@@ -496,16 +452,11 @@ onClick(area,index,event){
   this.checkId(area, index, event,);
 
 }
-
-
-
   getStuff(event){
     this.getMuscle();
     this.startTimer();
 
   }
-
-
 
 checkId(area, index, event){
  console.log(area._id)
@@ -513,18 +464,12 @@ checkId(area, index, event){
  console.log(this.state.temporaryValue.name)
  if (this.state.temporaryValue.id == area._id){
    console.log('hellz yeah')
-
    let newScore = score++
-
-
-
    console.log(newScore)
    this.setState({newScore: newScore})
    return newScore
  }
 }
-
-
 
   getMuscle(){
     let currentIndex = numbers.length
@@ -533,21 +478,6 @@ checkId(area, index, event){
     this.setState({temporaryValue: temporaryValue})
     return temporaryValue
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   render(){
 

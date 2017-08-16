@@ -18,9 +18,6 @@ import StudyFront from './components/StudyFront'
 import StudyBack from './components/StudyBack'
 import Study from './components/Study'
 import PlayFront from './components/PlayFront'
-import Timer from './components/Timer'
-import Getmuscle from './components/Getmuscle'
-import Muscles from './components/Muscles'
 
 
 
@@ -39,9 +36,7 @@ ReactDOM.render(
     <Route path='/studyback' component={StudyBack} />
     <Route path='/study' component={Study} />
     <Route path='/playfront' component={PlayFront} />
-    <Route path='/time' component={Timer} />
-    <Route path='/get' component={Getmuscle}/>
-    <Route path='/muscle' component={Muscles}/>
+  
   </div>
 
 </Router>,

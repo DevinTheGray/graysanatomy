@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import '../App.css';
 import ImageMapper from 'react-image-mapper';
-import Timer from './Timer';
 
 import {
   BrowserRouter as Router,
@@ -430,8 +429,8 @@ export default class PlayBack extends Component {
         <div className="label">
           <h3> Major Anterior Muscles </h3>
         </div>
-        <Link to='/play2'><button className="leggo"> Posterior</button></Link>
-        <Link to='/studyfront'><button className='leggo'> Study</button> </Link>
+        <Link to='/playfront'><button className="leggo"> Anterior </button></Link>
+        <Link to='/studyback'><button className='leggo'> Study</button> </Link>
         <div className='game'>
           <div className='muscle'>
             <ImageMapper ref="canvas" src={require('../assets/back.jpg')} map={MAP} onImageClick={this.onImageClick} onClick={this.onClick} onMouseEnter={this.onMouseEnter} />
