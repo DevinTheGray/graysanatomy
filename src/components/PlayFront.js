@@ -487,8 +487,11 @@ checkId(area, index, event){
       <div className="label">
         <h3> Major Anterior Muscles </h3>
       </div>
+      <div className="importante">
       <Link to='/play2'><button className="leggo"> Posterior</button></Link>
       <Link to='/studyfront'><button className='leggo'> Study</button> </Link>
+      <div className='instruction'><p>Start the game by clicking the button, and see how many points you can get before the time runs out!</p></div>
+    </div>
       <div className='game'>
         <div className='muscle'>
 

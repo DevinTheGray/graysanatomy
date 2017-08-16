@@ -429,8 +429,11 @@ export default class PlayBack extends Component {
         <div className="label">
           <h3> Major Anterior Muscles </h3>
         </div>
+        <div className = 'importante'>
         <Link to='/playfront'><button className="leggo"> Anterior </button></Link>
         <Link to='/studyback'><button className='leggo'> Study</button> </Link>
+        <div className='instruction'><p>Start the game by clicking the button, and see how many points you can get before the time runs out!</p></div>
+      </div>
         <div className='game'>
           <div className='muscle'>
             <ImageMapper ref="canvas" src={require('../assets/back.jpg')} map={MAP} onImageClick={this.onImageClick} onClick={this.onClick} onMouseEnter={this.onMouseEnter} />
