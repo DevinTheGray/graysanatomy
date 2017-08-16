@@ -8,6 +8,7 @@ import {
 } from 'react-router-dom'
 
 
+
 const MAP = {
   name: "my-map",
   areas: [
@@ -120,18 +121,21 @@ export default class StudyFront extends Component {
 
 
 
-      <div className='study'>
-        <div className='button'>
+    
+        <div className='Studybutton'>
         <Link to='/playfront'><button className='leggo'> Start</button></Link>
         </div>
         <div className='muscle-study'>
+          <div className='picture'>
+          <ImageMapper ref="canvas" src={require('../assets/front.jpg')} map={MAP} onImageClick={this.onImageClick, this.checkId} onClick={this.onClick} onMouseEnter={this.onMouseEnter} />
+        </div>
           <img src={require('../assets/labelfront.jpg')} />
 
           {/* <ImageMapper ref="canvas" src={require('../assets/studyback.jpg')} map={MAP} onMouseEnter={this.onMouseEnter} /> */}
 
         </div>
 
-      </div>
+
 
 
       </div>
