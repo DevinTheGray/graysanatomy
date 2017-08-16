@@ -9,194 +9,194 @@ import {
   Link
 } from 'react-router-dom'
 
-// const back = [{
-// id: 69,
-// name: 'deltoid'
-// },
-// {
-// id: 70,
-// name: 'deltoid'
-// },
-// {
-// id: 71,
-// name: 'triceps-brachii'
-// },
-// {
-// id: 72,
-// name: 'triceps-brachii'
-// },
-// {
-// id: 73,
-// name: 'brachioradialis'
-// },
-// {
-// id: 74,
-// name: 'brachioradialis'
-// },
-// {
-// id: 75,
-// name: 'anconeus'
-// },
-// {
-// id: 76,
-// name: 'anconeus'
-// },
-// {
-// id: 77,
-// name: 'extensor-digitorum'
-// },
-// {
-// id: 78,
-// name: 'extensor-digitorum'
-// },
-// {
-// id: 79,
-// name: 'extensor-carpi-ulnaris'
-// },
-// {
-// id: 80,
-// name: 'extensor-carpi-ulnaris'
-// },
-// {
-// id: 81,
-// name: 'extensor-retinaculum'
-// },
-// {
-// id: 82,
-// name: 'extensor-retinaculum'
-// },
-// {
-// id: 83,
-// name: 'peroneus-longus'
-// },
-// {
-// id: 84,
-// name: 'peroneus-longus'
-// },
-// {
-// id: 85,
-// name: 'achilles-tendon'
-// },
-// {
-// id: 86,
-// name: 'achilles-tendon'
-// },
-// {
-// id: 87,
-// name: 'gastronemius'
-// },
-// {
-// id: 88,
-// name: 'gastronemius'
-// },
-// {
-// id: 89,
-// name: 'plantaris'
-// },
-// {
-// id: 90,
-// name: 'plantaris'
-// },
-// {
-// id: 91,
-// name: 'semitendinosus'
-// },
-// {
-// id: 92,
-// name: 'semitendinosus'
-// },
-// {
-// id: 93,
-// name: 'semimembranosus'
-// },
-// {
-// id: 94,
-// name: 'semimembranosus'
-// },
-// {
-// id: 95,
-// name: 'adductor-longus'
-// },
-// {
-// id: 96,
-// name: 'adductor-longus'
-// },
-// {
-// id: 97,
-// name: 'biceps-femoris'
-// },
-// {
-// id: 98,
-// name: 'biceps-femoris'
-// },
-// {
-// id: 99,
-// name: 'vastus-lateralis'
-// },
-// {
-// id: 100,
-// name: 'vastus-lateralis'
-// },
-// {
-// id: 101,
-// name: 'gracilis'
-// },
-// {
-// id: 102,
-// name: 'gracilis'
-// },
-// {
-// id: 103,
-// name: 'iliotibal-band'
-// },
-// {
-// id: 104,
-// name: 'iliotibal-band'
-// },
-// {
-// id: 105,
-// name: 'gluteus-maximus'
-// },
-// {
-// id: 106,
-// name: 'gluteus-medius'
-// },
-// {
-// id: 107,
-// name: 'gluteus-medius'
-// },
-// {
-// id: 108,
-// name: 'external-oblique'
-// },
-// {
-// id: 109,
-// name: 'external-oblique'
-// },
-// {
-// id: 110,
-// name: 'latissimus-dorsi'
-// },
-// {
-// id: 111,
-// name: 'trapezius'
-// },
-// {
-// id: 112,
-// name: 'teres-major'
-// },
-// {
-// id: 113,
-// name: 'teres-major'
-// },
-// {
-// id: 114,
-// name: 'teres-minor'
-// },
-// {
-// id: 115,
-// name: 'teres-minor'
-// }]
+const numbers = [{
+id: 69,
+name: 'deltoid'
+},
+{
+id: 70,
+name: 'deltoid'
+},
+{
+id: 71,
+name: 'triceps-brachii'
+},
+{
+id: 72,
+name: 'triceps-brachii'
+},
+{
+id: 73,
+name: 'brachioradialis'
+},
+{
+id: 74,
+name: 'brachioradialis'
+},
+{
+id: 75,
+name: 'anconeus'
+},
+{
+id: 76,
+name: 'anconeus'
+},
+{
+id: 77,
+name: 'extensor-digitorum'
+},
+{
+id: 78,
+name: 'extensor-digitorum'
+},
+{
+id: 79,
+name: 'extensor-carpi-ulnaris'
+},
+{
+id: 80,
+name: 'extensor-carpi-ulnaris'
+},
+{
+id: 81,
+name: 'extensor-retinaculum'
+},
+{
+id: 82,
+name: 'extensor-retinaculum'
+},
+{
+id: 83,
+name: 'peroneus-longus'
+},
+{
+id: 84,
+name: 'peroneus-longus'
+},
+{
+id: 85,
+name: 'achilles-tendon'
+},
+{
+id: 86,
+name: 'achilles-tendon'
+},
+{
+id: 87,
+name: 'gastronemius'
+},
+{
+id: 88,
+name: 'gastronemius'
+},
+{
+id: 89,
+name: 'plantaris'
+},
+{
+id: 90,
+name: 'plantaris'
+},
+{
+id: 91,
+name: 'semitendinosus'
+},
+{
+id: 92,
+name: 'semitendinosus'
+},
+{
+id: 93,
+name: 'semimembranosus'
+},
+{
+id: 94,
+name: 'semimembranosus'
+},
+{
+id: 95,
+name: 'adductor-longus'
+},
+{
+id: 96,
+name: 'adductor-longus'
+},
+{
+id: 97,
+name: 'biceps-femoris'
+},
+{
+id: 98,
+name: 'biceps-femoris'
+},
+{
+id: 99,
+name: 'vastus-lateralis'
+},
+{
+id: 100,
+name: 'vastus-lateralis'
+},
+{
+id: 101,
+name: 'gracilis'
+},
+{
+id: 102,
+name: 'gracilis'
+},
+{
+id: 103,
+name: 'iliotibal-band'
+},
+{
+id: 104,
+name: 'iliotibal-band'
+},
+{
+id: 105,
+name: 'gluteus-maximus'
+},
+{
+id: 106,
+name: 'gluteus-medius'
+},
+{
+id: 107,
+name: 'gluteus-medius'
+},
+{
+id: 108,
+name: 'external-oblique'
+},
+{
+id: 109,
+name: 'external-oblique'
+},
+{
+id: 110,
+name: 'latissimus-dorsi'
+},
+{
+id: 111,
+name: 'trapezius'
+},
+{
+id: 112,
+name: 'teres-major'
+},
+{
+id: 113,
+name: 'teres-major'
+},
+{
+id: 114,
+name: 'teres-minor'
+},
+{
+id: 115,
+name: 'teres-minor'
+}]
 
 const MAP = {
   name: "my-secondmap",
@@ -253,47 +253,94 @@ const MAP = {
   ]
 }
 
-
+let score = 1
 
 export default class PlayBack extends Component {
   constructor(props) {
     super(props)
-    this.state = { muscle: "{muscle}" }
+    this.state = { numbers: numbers, temporaryValue: {} , time: {}, seconds: 60, newScore: 0 }
+    this.getMuscle=this.getMuscle.bind(this)
 
-    this.generateGuess = this.generateGuess.bind(this)
+
+
+
     this.onMouseEnter = this.onMouseEnter.bind(this)
     this.onClick = this.onClick.bind(this)
-    this.array = ['gluteus-medius', 'gluteus-maximus', 'deltoid', 'external-oblique', 'trapezius', 'gracilis', 'vastus-lateralis']
-    // this.state = { time: {}, seconds: 300 };
-    // this.timer = 0;
-    // this.startTimer = this.startTimer.bind(this);
-    // this.countDown = this.countDown.bind(this);
-    // this.generateGuess = this.generateGuess.bind(this)();
-
-
+    this.timer = 0;
+    this.startTimer = this.startTimer.bind(this);
+    this.countDown = this.countDown.bind(this);
+    this.getStuff=this.getStuff.bind(this);
+    this.checkId= this.checkId.bind(this);
 
   }
-  // componentDidMount() {
-  //   let anatomy = this.generateGuess(this.state);
-  //   this.setState({ muscle: anatomy });
-  // }
 
 
 
+  secondsToTime(secs){
+
+    let divisor_for_minutes = secs % (60 * 60);
+    let minutes = Math.floor(divisor_for_minutes / 60);
+
+    let divisor_for_seconds = divisor_for_minutes % 60;
+    let seconds = Math.ceil(divisor_for_seconds);
+
+    let obj = {
+
+      "m": minutes,
+      "s": seconds
+    };
+    return obj;
+  }
+
+  componentDidMount() {
+    let timeLeftVar = this.secondsToTime(this.state.seconds);
+    this.setState({ time: timeLeftVar });
+  }
+
+  startTimer() {
+    if (this.timer == 0) {
+      this.timer = setInterval(this.countDown, 1000);
+    }
+  }
 
 
+  countDown() {
 
-  generateGuess(array){
+    let seconds = this.state.seconds - 1;
+    this.setState({
+      time: this.secondsToTime(seconds),
+      seconds: seconds,
+    });
 
 
-      let currentIndex = array.length
-      let randomIndex = Math.floor(Math.random() * currentIndex);
-      let temporaryValue = array[randomIndex];
-
-      return temporaryValue;
-
+    if (seconds == 0) {
+      clearInterval(this.timer);
 
     }
+  }
+
+
+    countDown() {
+
+      let seconds = this.state.seconds - 1;
+      this.setState({
+        time: this.secondsToTime(seconds),
+        seconds: seconds,
+      });
+
+
+      if (seconds == 0) {
+        clearInterval(this.timer);
+
+      }
+    }
+
+
+
+
+
+
+
 
 
 
@@ -309,20 +356,67 @@ export default class PlayBack extends Component {
   }
 
 
-
-onClick(area,index,event){
+  onClick(area,index,event){
   this.refs.canvas.ctx.fillStyle = area.fillColor
   this.refs.canvas.ctx.fill()
 
-  this.muscle = this.generateGuess(this.array)
-  console.log(this.muscle);
-  this.setState({
-    muscle: this.muscle
 
-  });
-  return this.muscle
+  this.getMuscle();
+  this.checkId(area, index, event,);
 
-}
+  }
+
+
+
+  getStuff(event){
+    this.getMuscle();
+    this.startTimer();
+
+  }
+
+
+
+  checkId(area, index, event){
+  console.log(area._id)
+  console.log(this.state.temporaryValue.id)
+  console.log(this.state.temporaryValue.name)
+  if (this.state.temporaryValue.id == area._id){
+   console.log('hellz yeah')
+
+   let newScore = score++
+
+
+
+   console.log(newScore)
+   this.setState({newScore: newScore})
+   return newScore
+  }
+  }
+
+
+
+  getMuscle(){
+    let currentIndex = numbers.length
+    let randomIndex = Math.floor(Math.random()*currentIndex)
+    let temporaryValue = numbers[randomIndex]
+    this.setState({temporaryValue: temporaryValue})
+    return temporaryValue
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -334,43 +428,45 @@ onClick(area,index,event){
       <div className='play'>
 
         <div className="label">
-      <h3> Major Anterior Muscles </h3>
-    </div>
-    <Link to='/playfront'><button className="leggo"> Anterior</button></Link>
-    <Link to='/studyback'><button className='leggo'> Study</button> </Link>
-      <div className='game'>
-        <div className='muscle'>
-
-          <ImageMapper ref="canvas" src={require('../assets/back.jpg')} map={MAP} onImageClick={this.onImageClick} onClick={this.onClick} onMouseEnter={this.onMouseEnter} />
-
+          <h3> Major Anterior Muscles </h3>
         </div>
-        <div className='generate-muscle'>
-          <div className='timer'>
+        <Link to='/play2'><button className="leggo"> Posterior</button></Link>
+        <Link to='/studyfront'><button className='leggo'> Study</button> </Link>
+        <div className='game'>
+          <div className='muscle'>
+            <ImageMapper ref="canvas" src={require('../assets/back.jpg')} map={MAP} onImageClick={this.onImageClick} onClick={this.onClick} onMouseEnter={this.onMouseEnter} />
 
-            <Timer />
+
+          </div>
+          <div className='generate-muscle'>
+
+              <div className='count-down'>
+
+                  <div className="red">
+
+                  m: {this.state.time.m} s: {this.state.time.s}
+                </div>
+                </div>
+            <div className='body'>
+              <button onClick={this.getStuff}> Start Game </button>
+              <div>{this.state.temporaryValue.name}</div>
+              <div>Your score: {this.state.newScore}</div>
+
+
+
             </div>
 
 
 
-          <div className='random'>
-
-
-            <h3>Find {this.state.muscle}</h3>
-            
 
 
 
+
+
+            </div>
 
 
           </div>
-
-
-        {/* </div> */}
-        </div>
-
-
-      </div>
-
 
       </div>
 

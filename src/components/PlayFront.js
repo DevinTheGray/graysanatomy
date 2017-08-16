@@ -370,8 +370,7 @@ const numbers =[{
 
 
 
-
-
+let score = 1
 
 
 
@@ -390,7 +389,7 @@ const numbers =[{
 export default class PlayFront extends Component {
   constructor(props) {
     super(props)
-    this.state = { numbers: numbers, temporaryValue: {} , time: {}, seconds: 60, score: {} }
+    this.state = { numbers: numbers, temporaryValue: {} , time: {}, seconds: 60, newScore: 0 }
     this.getMuscle=this.getMuscle.bind(this)
 
 
@@ -508,18 +507,24 @@ onClick(area,index,event){
 
 
 
-
-  checkId(area, index, event){
+checkId(area, index, event){
  console.log(area._id)
  console.log(this.state.temporaryValue.id)
  console.log(this.state.temporaryValue.name)
  if (this.state.temporaryValue.id == area._id){
    console.log('hellz yeah')
-   let score = 0
-   this.setState({score: 0})
 
+   let newScore = score++
+
+
+
+   console.log(newScore)
+   this.setState({newScore: newScore})
+   return newScore
+ }
 }
-  }
+
+
 
   getMuscle(){
     let currentIndex = numbers.length
@@ -561,22 +566,18 @@ onClick(area,index,event){
 
         </div>
         <div className='generate-muscle'>
-            {/* <div className='timer'>
-            <Timer />
-            </div> */}
 
             <div className='count-down'>
 
-                {/* <button  className="leggo" onClick={this.startTimer}>Start</button> */}
                 <div className="red">
 
                 m: {this.state.time.m} s: {this.state.time.s}
               </div>
               </div>
           <div className='body'>
-            <button onClick={this.getStuff}> Click </button>
+            <button onClick={this.getStuff}> Start Game </button>
             <div>{this.state.temporaryValue.name}</div>
-            <div>{this.state.score}</div>
+            <div>Your score: {this.state.newScore}</div>
 
 
 
