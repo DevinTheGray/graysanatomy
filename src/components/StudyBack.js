@@ -84,7 +84,7 @@ export default class StudyBack extends Component {
 
 
       <div className='study'>
-        <div className='button'>
+        <div className='.StudyButton'>
         <Link to='/play2'><button className='leggo'> Start</button></Link>
         </div>
         <div className='muscle-study'>

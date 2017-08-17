@@ -84,36 +84,34 @@ const MAP = {
   ]
 }
 
+
 export default class StudyFront extends Component {
     constructor(props) {
       super(props)
+      this.state=({areas: {} })
 
       this.onMouseEnter = this.onMouseEnter.bind(this)
-      // this.onLoad = this.onLoad.bind(this)
       // this.onClick = this.onClick.bind(this)
-
-
-
-
-
-
     }
 
-
-    //
-    // onClick(area, index, event){
-    //   this.refs.canvas.ctx.fillStyle = area.fillColor
-    //   this.refs.canvas.ctx.fill()
-    //
-    // }
 
     onMouseEnter(area, index, event) {
       this.refs.canvas.ctx.fillStyle = area.fillColor
       this.refs.canvas.ctx.fill()
     }
-    playFront(){
-      return
-    }
+
+  // onClick(area, index, event){
+  //   console.log(area._id)
+  //   console.log(MAP)
+  //   let id = this.area._id
+  //   return id
+  //   this.setState({areas: id})
+  //
+  //
+  //
+  //
+  // }
+
 
   render(){
     return(
@@ -121,17 +119,19 @@ export default class StudyFront extends Component {
 
 
 
-    
+
         <div className='Studybutton'>
         <Link to='/playfront'><button className='leggo'> Start</button></Link>
         </div>
         <div className='muscle-study'>
           <div className='picture'>
-          <ImageMapper ref="canvas" src={require('../assets/front.jpg')} map={MAP} onImageClick={this.onImageClick, this.checkId} onClick={this.onClick} onMouseEnter={this.onMouseEnter} />
+          {/* <ImageMapper ref="canvas" src={require('../assets/front.jpg')} map={MAP} onImageClick={this.onImageClick, this.checkId} onClick={this.onClick} onMouseEnter={this.onMouseEnter} /> */}
+        </div>
+        <div className="tellMuscle">
         </div>
           <img src={require('../assets/labelfront.jpg')} />
+          {/* <div>{this.state.areas}</div> */}
 
-          {/* <ImageMapper ref="canvas" src={require('../assets/studyback.jpg')} map={MAP} onMouseEnter={this.onMouseEnter} /> */}
 
         </div>
 

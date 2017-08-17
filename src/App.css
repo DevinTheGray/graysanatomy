@@ -196,19 +196,16 @@ justify-content: space-between;
 }
 
 .muscle-study{
-  border: solid;
-  border-color: red;
+
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 .Studybutton{
-  border: solid;
-  border-color: green;
+
 }
 .picture{
-  border: solid;
-  border-color: blue;
+
   margin-right: 30px;
 }
 .count-down {
